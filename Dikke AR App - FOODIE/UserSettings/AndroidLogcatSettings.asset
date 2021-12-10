@@ -1,5 +1,5 @@
 {
-    "m_SelectedDeviceId": "7d6c303e",
+    "m_SelectedDeviceId": "af950ddd",
     "m_SelectedPackage": {
         "deviceId": "",
         "name": "",
@@ -7,7 +7,26 @@
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [],
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "af950ddd",
+            "name": "com.DefaultCompany.DikkeARAppFOODIE",
+            "processId": 8990,
+            "exited": true
+        },
+        {
+            "deviceId": "af950ddd",
+            "name": "net.oneplus.launcher",
+            "processId": 16349,
+            "exited": false
+        },
+        {
+            "deviceId": "af950ddd",
+            "name": "com.DefaultCompany.DikkeARAppFOODIE",
+            "processId": 29208,
+            "exited": false
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
