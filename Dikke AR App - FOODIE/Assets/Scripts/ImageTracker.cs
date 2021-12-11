@@ -39,13 +39,14 @@ public class ImageTracker : MonoBehaviour
             if (image.referenceImage.name == "one")
             {
                 Debug.Log("Got image 1");
-                SceneManager.LoadScene(scene1);
-                //InstantiatedObjects.Add(image.GetInstanceID(), Instantiate(Prefab1, image.transform.position, image.transform.rotation));
+                // SceneManager.LoadScene(scene1);
+                UnityEngine.SceneManagement.SceneManager.LoadScene(scene1);
+                                //InstantiatedObjects.Add(image.GetInstanceID(), Instantiate(Prefab1, image.transform.position, image.transform.rotation));
             }
             else if (image.referenceImage.name == "two")
             {
                 Debug.Log("Got image 2");
-                SceneManager.LoadScene(scene2);
+                UnityEngine.SceneManagement.SceneManager.LoadScene(scene2);
                 //InstantiatedObjects.Add(image.GetInstanceID(), Instantiate(Prefab2, image.transform.position, image.transform.rotation));
             }
         }
