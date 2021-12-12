@@ -54,26 +54,26 @@ public class SimulatorController : MonoBehaviour
         }
     }
 
-    //void Update()
-    //{
-    //    RaycastHit hit;
-    //    Ray ray = cam.ScreenPointToRay(mouse_position);
-    //    if (Physics.Raycast(ray, out hit))      // physics raycast ipv AR raycast omdat ik in een unity simulatie zit
-    //    {
-    //        if (hit.transform.gameObject.scene.name == "Simulator")
-    //        {
-    //            app.EnableARCursor(hit.point, Quaternion.FromToRotation(hit.transform.up, hit.normal));
-    //        }
-    //        else
-    //        {
-    //            app.DisableARCursor();
-    //        }
-    //    }
-    //    else
-    //    {
-    //        app.DisableARCursor();
-    //    }
-    //}
+    void Update()
+    {
+        RaycastHit hit;
+        Ray ray = cam.ScreenPointToRay(mouse_position);
+        if (Physics.Raycast(ray, out hit))      // physics raycast ipv AR raycast omdat ik in een unity simulatie zit
+        {
+            if (hit.transform.gameObject.scene.name == "Simulator")
+            {
+                app.EnableARCursor(hit.point, Quaternion.FromToRotation(hit.transform.up, hit.normal));
+            }
+            else
+            {
+                app.DisableARCursor();
+            }
+        }
+        else
+        {
+            app.DisableARCursor();
+        }
+    }
 
 #endif
 
