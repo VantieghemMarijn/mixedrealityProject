@@ -48,7 +48,9 @@ public class AppManager : MonoBehaviour
     private void Start()
     {
         InitSelectMenu();
-        SelectItemFood("Sushi Plate");
+        print(Storage.PrefabName);
+        SelectItemFood(Storage.PrefabName);
+
         InfoPanel.gameObject.SetActive(false);
     }
 
