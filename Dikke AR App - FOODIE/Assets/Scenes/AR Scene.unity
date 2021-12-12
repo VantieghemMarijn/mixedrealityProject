@@ -1322,7 +1322,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $89
+  m_Text: 
 --- !u!222 &1165302676
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1787,6 +1787,7 @@ MonoBehaviour:
   UIPink: {fileID: 2100000, guid: f529993944f564f47a7cc1996fdbe21c, type: 2}
   InfoPanel: {fileID: 1731984891}
   FoodNameUI: {fileID: 1275321199}
+  FoodPriceUI: {fileID: 1165302675}
 --- !u!114 &1684721108
 MonoBehaviour:
   m_ObjectHideFlags: 0

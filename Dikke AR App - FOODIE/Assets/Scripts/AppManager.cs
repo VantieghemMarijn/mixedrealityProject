@@ -36,6 +36,7 @@ public class AppManager : MonoBehaviour
     public Material UIPink;
     public GameObject InfoPanel;
     public Text FoodNameUI;
+    public Text FoodPriceUI;
 
     private GameObject BillBoardInstantie;
     private bool PlacingFood = true;
@@ -53,6 +54,7 @@ public class AppManager : MonoBehaviour
     private void Start()
     {
         Debug.Log(Storage.PrefabName);
+        Debug.Log(Storage.PrefabPrice);
         isEditor = Application.installMode == ApplicationInstallMode.Editor;
         InitSelectMenu();
         SelectItemFood(Storage.PrefabName);
@@ -114,6 +116,7 @@ public class AppManager : MonoBehaviour
                 CurrentItemSelectedPrefab = arPrefabFood.Prefab;
                 CurrentItemSelectedDescr = arPrefabFood.Description;
                 FoodNameUI.text = CurrentItemSelectedName;
+                FoodPriceUI.text = Storage.PrefabPrice;
                 ARCursor = Instantiate(CurrentItemSelectedPrefab, transform);
                 ARCursor.SetActive(false);
                 return;
