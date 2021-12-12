@@ -2557,7 +2557,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $12
+  m_Text: $2
 --- !u!222 &534098442
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11094,7 +11094,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Bacon burger
+  m_Text: Burger
 --- !u!222 &1747583672
 CanvasRenderer:
   m_ObjectHideFlags: 0

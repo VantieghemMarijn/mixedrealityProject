@@ -1700,7 +1700,7 @@ MonoBehaviour:
   - Name: Baguette
     Prefab: {fileID: 1990766955106487178, guid: b5aa6ec13f1a0794ca7a72fe29102e58, type: 3}
     Description: En la Francais
-  - Name: 'Bacon Burger '
+  - Name: 'Burger '
     Prefab: {fileID: 166009592708272627, guid: 5e5dba767e7a9f64189c187f8850d9fa, type: 3}
     Description: Better then McDonalds
   - Name: Cheese Fondue

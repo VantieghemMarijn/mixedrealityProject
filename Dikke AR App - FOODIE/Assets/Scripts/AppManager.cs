@@ -51,6 +51,7 @@ public class AppManager : MonoBehaviour
 
     private void Start()
     {
+        SelectItemFood(Storage.PrefabName);
         isEditor = Application.installMode == ApplicationInstallMode.Editor;
         if (isEditor == true)
         {
