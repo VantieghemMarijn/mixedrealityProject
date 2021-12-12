@@ -59,10 +59,10 @@ public class AppManager : MonoBehaviour
         InitSelectMenu();
         SelectItemFood(Storage.PrefabName);
         InfoPanel.gameObject.SetActive(false);
-        if (isEditor == true)
-        {
-            EditorSceneManager.LoadSceneInPlayMode("Assets/Editor/Scenes/Simulator.unity", new LoadSceneParameters(LoadSceneMode.Additive));
-        }
+        //if (isEditor == true)
+        //{
+        //    EditorSceneManager.LoadSceneInPlayMode("Assets/Editor/Scenes/Simulator.unity", new LoadSceneParameters(LoadSceneMode.Additive));
+        //}
     }
 
     public void OnDisable()
