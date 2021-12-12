@@ -11,6 +11,7 @@ public class LoadARView : MonoBehaviour
     
     public void LoadAR(){
         Storage.PrefabName=transform.parent.gameObject.GetComponent<Text>().text;
+        Storage.PrefabPrice=transform.parent.Find("menu_item_price").GetComponent<Text>().text;
         Storage.LastVisitedIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
         UnityEngine.SceneManagement.SceneManager.LoadScene("AR Scene");
     }
