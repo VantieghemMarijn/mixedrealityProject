@@ -8,8 +8,10 @@ using UnityEngine.EventSystems;
 public class LoadARView : MonoBehaviour
 {
     // Start is called before the first frame update
+    
     public void LoadAR(){
-        Storage.PrefabName="Sushi Plate";
+        Storage.PrefabName=transform.parent.gameObject.GetComponent<Text>().text;
+        print(Storage.PrefabName);
         UnityEngine.SceneManagement.SceneManager.LoadScene("AR Scene");
     }
     
