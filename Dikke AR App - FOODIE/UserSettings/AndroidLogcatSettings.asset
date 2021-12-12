@@ -1,13 +1,68 @@
 {
     "m_SelectedDeviceId": "0A281JEC201600",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "af950ddd",
+        "name": "com.DefaultCompany.DikkeARAppFOODIE",
+        "processId": 8481,
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [],
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "af950ddd",
+            "name": "com.DefaultCompany.DikkeARAppFOODIE",
+            "processId": 8990,
+            "exited": true
+        },
+        {
+            "deviceId": "af950ddd",
+            "name": "net.oneplus.launcher",
+            "processId": 16349,
+            "exited": false
+        },
+        {
+            "deviceId": "af950ddd",
+            "name": "com.DefaultCompany.DikkeARAppFOODIE",
+            "processId": 29208,
+            "exited": false
+        },
+        {
+            "deviceId": "af950ddd",
+            "name": "com.DefaultCompany.DikkeARAppFOODIE",
+            "processId": 18725,
+            "exited": false
+        },
+        {
+            "deviceId": "af950ddd",
+            "name": "com.DefaultCompany.DikkeARAppFOODIE",
+            "processId": 18726,
+            "exited": false
+        },
+        {
+            "deviceId": "af950ddd",
+            "name": "com.DefaultCompany.DikkeARAppFOODIE",
+            "processId": 18728,
+            "exited": false
+        },
+        {
+            "deviceId": "af950ddd",
+            "name": "com.DefaultCompany.DikkeARAppFOODIE",
+            "processId": 18729,
+            "exited": false
+        },
+        {
+            "deviceId": "af950ddd",
+            "name": "com.DefaultCompany.DikkeARAppFOODIE",
+            "processId": 26831,
+            "exited": false
+        },
+        {
+            "deviceId": "af950ddd",
+            "name": "com.DefaultCompany.DikkeARAppFOODIE",
+            "processId": 8481,
+            "exited": false
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
