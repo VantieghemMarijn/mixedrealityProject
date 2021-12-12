@@ -1401,7 +1401,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mega yacht
+  m_Text: 
 --- !u!222 &1275321200
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1712,34 +1712,34 @@ MonoBehaviour:
   - Name: Baguette
     Prefab: {fileID: 1990766955106487178, guid: b5aa6ec13f1a0794ca7a72fe29102e58, type: 3}
     Description: En la Francais
-  - Name: 'Burger '
+  - Name: Burger
     Prefab: {fileID: 166009592708272627, guid: 5e5dba767e7a9f64189c187f8850d9fa, type: 3}
     Description: Better then McDonalds
   - Name: Cheese Fondue
     Prefab: {fileID: 7463022481925232658, guid: 10c215d51085604429216f5a6b575bea, type: 3}
     Description: Quickest way to obesity
-  - Name: 'Donut '
+  - Name: Donut
     Prefab: {fileID: 7605978894298041243, guid: 2b4452a1d6c6768418314a6f8bc9ae93, type: 3}
     Description: Bread with hole in it
-  - Name: 'Eclair '
+  - Name: Eclair
     Prefab: {fileID: 3265194496412521649, guid: 287f1a99bead06c46ae781c7ba95ffad, type: 3}
     Description: HHMMMmm
   - Name: Salmon
     Prefab: {fileID: 2887086397524154448, guid: af93f4af26ca5b744ab961604e80d3a1, type: 3}
     Description: Living sushi
-  - Name: 'Fries '
+  - Name: Fries
     Prefab: {fileID: 2455264989373443118, guid: 838d26ef65677104b9f9134d2add3c50, type: 3}
     Description: Real Belguim fries
   - Name: Smoked Ham
     Prefab: {fileID: 8822890113061524296, guid: 14fc151e7de8bea41b76e1572a392def, type: 3}
     Description: Meat lover?
-  - Name: 'Hotdog '
+  - Name: Hotdog
     Prefab: {fileID: 3049970278089077547, guid: 8309a718d2b0ca148ba0b59b816255b7, type: 3}
     Description: Don't think about the name
-  - Name: 'Ice Cream '
+  - Name: Ice Cream
     Prefab: {fileID: 6090791098668429482, guid: 305038524abf7b14f89e21ddfd91f59d, type: 3}
     Description: Sweet strawberry's
-  - Name: 'Muffin '
+  - Name: Muffin
     Prefab: {fileID: 4680500385981382874, guid: 801d876655a769e4d9a71667875bde82, type: 3}
     Description: Chocolatte muffin
   - Name: Apple Pie
@@ -1751,13 +1751,13 @@ MonoBehaviour:
   - Name: Spear Ribs
     Prefab: {fileID: 2360309899612576950, guid: e9fe587965d883647a995cac386c5bcb, type: 3}
     Description: Best in class
-  - Name: 'Steak '
+  - Name: Steak
     Prefab: {fileID: 102767185566335886, guid: 3b3088b75c2b2b441b997c7a67c6f787, type: 3}
     Description: From the grill
   - Name: Potato Stew
     Prefab: {fileID: 5393340717117709475, guid: 00ad34dac6389bb4db80cbfad4d50340, type: 3}
     Description: What is this
-  - Name: 'Taco''s '
+  - Name: Taco's
     Prefab: {fileID: 3775057294188618522, guid: 1338a2580746ed24487d8b1f4bc1e7ac, type: 3}
     Description: Real Mexican made
   - Name: Watermelon Slices
@@ -1786,6 +1786,7 @@ MonoBehaviour:
   UIBlue: {fileID: 2100000, guid: 0f1d3af21d4d8dd4cad3af8743f99bea, type: 2}
   UIPink: {fileID: 2100000, guid: f529993944f564f47a7cc1996fdbe21c, type: 2}
   InfoPanel: {fileID: 1731984891}
+  FoodNameUI: {fileID: 1275321199}
 --- !u!114 &1684721108
 MonoBehaviour:
   m_ObjectHideFlags: 0
