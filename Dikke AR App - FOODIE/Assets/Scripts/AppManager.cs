@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEditor.SceneManagement;
+using System;
 
 public class AppManager : MonoBehaviour
 {
@@ -43,20 +46,23 @@ public class AppManager : MonoBehaviour
     private GameObject CurrentItemSelectedPrefab;
     private string CurrentItemSelectedName;
     private string CurrentItemSelectedDescr;
+    private bool isEditor;
 
 
     private void Start()
     {
+        isEditor = Application.installMode == ApplicationInstallMode.Editor;
+        if (isEditor == true)
+        {
+            EditorSceneManager.LoadSceneInPlayMode("Assets/Editor/Scenes/Simulator.unity", new LoadSceneParameters(LoadSceneMode.Additive));
+        }
         InitSelectMenu();
-        print(Storage.PrefabName);
-        SelectItemFood(Storage.PrefabName);
-
         InfoPanel.gameObject.SetActive(false);
     }
 
     public void OnDisable()
     {
-        Object.Destroy(ARCursor);
+        UnityEngine.Object.Destroy(ARCursor);
     }
 
     // wordt gecalled vanuit de PlaneObserver script
@@ -109,10 +115,10 @@ public class AppManager : MonoBehaviour
             }
         }
         // Geen matching item gevonden
-        Debug.Log("-------------------------------- Selected Food doesn't excist ---------------------------------------");
         CurrentItemSelectedName = null;
         CurrentItemSelectedPrefab = null;
         CurrentItemSelectedDescr = null;
+        throw new Exception("-------------------------------- Selected Food doesn't excist ---------------------------------------\n\n");
     }
 
     public void SelectItemDrinks(string name)
@@ -129,9 +135,9 @@ public class AppManager : MonoBehaviour
             }
         }
         // Geen matching Drink gevonden
-        Debug.Log("-------------------------------- Selected Drink doesn't excist ---------------------------------------");
         CurrentItemSelectedName = null;
         CurrentItemSelectedPrefab = null;
+        throw new Exception("-------------------------------- Selected Drink doesn't excist ---------------------------------------\n\n");
     }
 
     private void InitSelectMenu()
@@ -190,10 +196,10 @@ public class AppManager : MonoBehaviour
                     {       // de huidige touch phase is negatief && de touch phase hievoor was actief
                         if (ARCursor.activeSelf)    // check of de AR cursor actief is, 
                         {
-                            Instantiate(CurrentItemSelectedPrefab, ARCursor.transform.position, ARCursor.transform.rotation);     // plaats je prefab
                             if (PlacingFood == true)
                             {       // enkel de eerste keer bij je food uitvoeren
                                 PlacedFood = Instantiate(CurrentItemSelectedPrefab, ARCursor.transform.position, ARCursor.transform.rotation);      // GameObject onthouden om later de afstand te berekenen
+                                PlacedFood.SetActive(true);
                                 Vector3 BillBoardPosition = ARCursor.transform.position;
                                 BillBoardPosition.y += (float)0.2;      // zorg ervoor dat de billboard center 20cm boven je 'eten' zweeft
                                 BillBoardInstantie = Instantiate(BillBoardPrefab, BillBoardPosition, ARCursor.transform.rotation);
@@ -202,6 +208,10 @@ public class AppManager : MonoBehaviour
                                 BillBoardText = GameObject.FindGameObjectWithTag("BillBoardText").GetComponent<TextMesh>();     // de TextMesh van het gameobject met tag BillBoardText
                                 BillBoardText.text = CurrentItemSelectedDescr;
                                 BillBoardInstantie.SetActive(false);        // je billboard nog niet tonen
+                            }
+                            else
+                            {
+                                Instantiate(CurrentItemSelectedPrefab, ARCursor.transform.position, ARCursor.transform.rotation);     // plaats je prefab
                             }
                             PlacingFood = false;         // reset alles
                             CurrentItemSelectedPrefab = null;

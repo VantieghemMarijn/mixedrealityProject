@@ -2,7 +2,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
-using UnityEditor.SceneManagement;
 
 public class SimulatorWindow : EditorWindow     // new window toevoegen in unity
 {
@@ -25,8 +24,8 @@ public class SimulatorWindow : EditorWindow     // new window toevoegen in unity
     void PlayModeChanged(PlayModeStateChange state)
     {
         if (state == PlayModeStateChange.EnteredPlayMode)
-        {       // laad de simulator scene als je playmode actief is
-            EditorSceneManager.LoadSceneInPlayMode("Assets/Editor/Scenes/Simulator.unity", new LoadSceneParameters(LoadSceneMode.Additive));
+        {       // laad de simulator scene als je playmode actief is --> is verhuist naar appmanager
+            // EditorSceneManager.LoadSceneInPlayMode("Assets/Editor/Scenes/Simulator.unity", new LoadSceneParameters(LoadSceneMode.Additive));
         }
     }
 
