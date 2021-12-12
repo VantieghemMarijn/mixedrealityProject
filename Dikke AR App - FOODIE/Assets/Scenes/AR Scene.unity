@@ -1752,13 +1752,13 @@ MonoBehaviour:
     Prefab: {fileID: 8703121481358650110, guid: 559f5800ada66f44bb543fde87278a78, type: 3}
     Description: Healty boy?
   ARPrefabsDrinksList:
-  - Name: Beer
+  - Name: Beer 50cl
     Prefab: {fileID: 2936383382945430084, guid: 8905fbe47e6d3ac47b8dc5e72ed06e4f, type: 3}
-  - Name: Cocktail Blue
+  - Name: Blue Lagoon
     Prefab: {fileID: 8155875999019326606, guid: 4fcda5066ccc14d4ab5de2fb9870fb90, type: 3}
-  - Name: Cocktail Green
+  - Name: Mojito
     Prefab: {fileID: 8451955203687780556, guid: e5636e3c752d2e8459f4d4094fe039eb, type: 3}
-  - Name: Cocktail Red
+  - Name: Bloody Mary
     Prefab: {fileID: 2325810060083521678, guid: 50355de7d0ce36d4daf721c16e82d984, type: 3}
   - Name: Wine Bottle Red
     Prefab: {fileID: 7544430572827360201, guid: 78ca08abac4d9f54f812960b65da4693, type: 3}

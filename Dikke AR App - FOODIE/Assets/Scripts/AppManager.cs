@@ -51,14 +51,15 @@ public class AppManager : MonoBehaviour
 
     private void Start()
     {
-        SelectItemFood(Storage.PrefabName);
+        Debug.Log(Storage.PrefabName);
         isEditor = Application.installMode == ApplicationInstallMode.Editor;
+        InitSelectMenu();
+        SelectItemFood(Storage.PrefabName);
+        InfoPanel.gameObject.SetActive(false);
         if (isEditor == true)
         {
             EditorSceneManager.LoadSceneInPlayMode("Assets/Editor/Scenes/Simulator.unity", new LoadSceneParameters(LoadSceneMode.Additive));
         }
-        InitSelectMenu();
-        InfoPanel.gameObject.SetActive(false);
     }
 
     public void OnDisable()
@@ -107,6 +108,7 @@ public class AppManager : MonoBehaviour
         {
             if (arPrefabFood.Name == name)
             {
+                Debug.Log("------ Food found ------");
                 CurrentItemSelectedName = arPrefabFood.Name;
                 CurrentItemSelectedPrefab = arPrefabFood.Prefab;
                 CurrentItemSelectedDescr = arPrefabFood.Description;
@@ -154,7 +156,6 @@ public class AppManager : MonoBehaviour
         }
 
         // Het standaard geselecteerde item invullen
-        DropdownItemSelected(dropdown);
         dropdown.RefreshShownValue();
 
         dropdown.onValueChanged.AddListener(delegate { DropdownItemSelected(dropdown); });
