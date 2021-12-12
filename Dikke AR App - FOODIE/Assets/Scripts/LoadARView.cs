@@ -11,11 +11,9 @@ public class LoadARView : MonoBehaviour
     
     public void LoadAR(){
         Storage.PrefabName=transform.parent.gameObject.GetComponent<Text>().text;
+        Storage.LastVisitedIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
         UnityEngine.SceneManagement.SceneManager.LoadScene("AR Scene");
     }
     
 }
 
-public static class Storage {
-    public static string PrefabName {get;set;}
-}

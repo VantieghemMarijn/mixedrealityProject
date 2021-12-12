@@ -4,6 +4,13 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.SceneManagement;
 
+public static class Storage
+{
+    public static string PrefabName { get; set; }
+    public static int LastVisitedIndex { get; set; }
+}
+
+
 [RequireComponent(typeof(ARTrackedImageManager))]       // script kan niet gestart worden als er geen ARTrackedImageManager is (in unity)
 public class ImageTracker : MonoBehaviour
 {
@@ -40,12 +47,14 @@ public class ImageTracker : MonoBehaviour
             {
                 Debug.Log("Got image 1");
                 // SceneManager.LoadScene(scene1);
+                Storage.LastVisitedIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
                 UnityEngine.SceneManagement.SceneManager.LoadScene(scene1);
                                 //InstantiatedObjects.Add(image.GetInstanceID(), Instantiate(Prefab1, image.transform.position, image.transform.rotation));
             }
             else if (image.referenceImage.name == "two")
             {
                 Debug.Log("Got image 2");
+                Storage.LastVisitedIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
                 UnityEngine.SceneManagement.SceneManager.LoadScene(scene2);
                 //InstantiatedObjects.Add(image.GetInstanceID(), Instantiate(Prefab2, image.transform.position, image.transform.rotation));
             }
@@ -72,3 +81,5 @@ public class ImageTracker : MonoBehaviour
         }
     }
 }
+
+

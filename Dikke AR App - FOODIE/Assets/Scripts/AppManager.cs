@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using UnityEditor.SceneManagement;
+//using UnityEngine.SceneManagement;
+//using UnityEditor.SceneManagement;
 using System;
 
 public class AppManager : MonoBehaviour
@@ -56,10 +56,10 @@ public class AppManager : MonoBehaviour
         InitSelectMenu();
         SelectItemFood(Storage.PrefabName);
         InfoPanel.gameObject.SetActive(false);
-        if (isEditor == true)
-        {
-            EditorSceneManager.LoadSceneInPlayMode("Assets/Editor/Scenes/Simulator.unity", new LoadSceneParameters(LoadSceneMode.Additive));
-        }
+        //if (isEditor == true)
+        //{
+        //    EditorSceneManager.LoadSceneInPlayMode("Assets/Editor/Scenes/Simulator.unity", new LoadSceneParameters(LoadSceneMode.Additive));
+        //}
     }
 
     public void OnDisable()
