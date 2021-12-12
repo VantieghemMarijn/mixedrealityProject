@@ -1436,12 +1436,12 @@ RectTransform:
   - {fileID: 473845808}
   - {fileID: 361651771}
   - {fileID: 1348085157}
-  m_Father: {fileID: 661251112}
-  m_RootOrder: 4
+  m_Father: {fileID: 2010711590}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: -1189}
+  m_AnchoredPosition: {x: 16.792374, y: 152.54065}
   m_SizeDelta: {x: 646.13, y: 450.668}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &370709691
@@ -2737,7 +2737,6 @@ RectTransform:
   - {fileID: 933017564}
   - {fileID: 1555816158}
   - {fileID: 131955243}
-  - {fileID: 367836729}
   - {fileID: 1201912263}
   m_Father: {fileID: 2010711590}
   m_RootOrder: 1
@@ -5017,7 +5016,7 @@ RectTransform:
   - {fileID: 958041275}
   - {fileID: 729253122}
   m_Father: {fileID: 661251112}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5143,7 +5142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32, y: -84}
+  m_AnchoredPosition: {x: 47, y: -84}
   m_SizeDelta: {x: 122.49, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1238650052
@@ -5622,7 +5621,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Drinks
+  m_Text: Deserts
 --- !u!222 &1299421661
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7518,7 +7517,7 @@ RectTransform:
   - {fileID: 1669866792}
   - {fileID: 1656796901}
   m_Father: {fileID: 2010711590}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8187,7 +8186,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: burgers
+  m_Text: Healthy
 --- !u!222 &1991150358
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8227,6 +8226,7 @@ RectTransform:
   m_Children:
   - {fileID: 1221960572}
   - {fileID: 661251112}
+  - {fileID: 367836729}
   - {fileID: 1843800239}
   m_Father: {fileID: 903817858}
   m_RootOrder: 1
