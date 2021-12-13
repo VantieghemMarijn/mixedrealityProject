@@ -2,14 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
-using UnityEngine.SceneManagement;
-
-public static class Storage
-{
-    public static string PrefabName { get; set; }
-    public static string PrefabPrice { get; set; }
-    public static int LastVisitedIndex { get; set; }
-}
 
 
 [RequireComponent(typeof(ARTrackedImageManager))]       // script kan niet gestart worden als er geen ARTrackedImageManager is (in unity)
@@ -17,7 +9,7 @@ public class ImageTracker : MonoBehaviour
 {
 
     private ARTrackedImageManager Manager;
-    private Dictionary<int, GameObject> InstantiatedObjects = new Dictionary<int, GameObject>();
+    public ARSession arSession;
 
     public string scene1 = "page2";
     public string scene2 = "page3";
@@ -27,12 +19,7 @@ public class ImageTracker : MonoBehaviour
     {
         Manager = GetComponent<ARTrackedImageManager>();
         Manager.trackedImagesChanged += OnImageEvent;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        arSession.Reset();
     }
 
     private void OnDisable()
@@ -46,38 +33,13 @@ public class ImageTracker : MonoBehaviour
         {
             if (image.referenceImage.name == "one")
             {
-                Debug.Log("Got image 1");
-                // SceneManager.LoadScene(scene1);
-                Storage.LastVisitedIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
+                Debug.Log("------------------------------------- Got image 1 -------------------------------------");
                 UnityEngine.SceneManagement.SceneManager.LoadScene(scene1);
-                                //InstantiatedObjects.Add(image.GetInstanceID(), Instantiate(Prefab1, image.transform.position, image.transform.rotation));
             }
             else if (image.referenceImage.name == "two")
             {
-                Debug.Log("Got image 2");
-                Storage.LastVisitedIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
+                Debug.Log("------------------------------------- Got image 2 -------------------------------------");
                 UnityEngine.SceneManagement.SceneManager.LoadScene(scene2);
-                //InstantiatedObjects.Add(image.GetInstanceID(), Instantiate(Prefab2, image.transform.position, image.transform.rotation));
-            }
-        }
-
-        foreach (ARTrackedImage image in Args.updated)
-        {
-            int id = image.GetInstanceID();
-            if (InstantiatedObjects.ContainsKey(id))
-            {
-                InstantiatedObjects[id].transform.position = image.transform.position;
-                InstantiatedObjects[id].transform.rotation = image.transform.rotation;
-            }
-        }
-
-        foreach (ARTrackedImage image in Args.removed)
-        {
-            int id = image.GetInstanceID();
-            if (InstantiatedObjects.ContainsKey(id))
-            {
-                Object.Destroy(InstantiatedObjects[id]);
-                InstantiatedObjects.Remove(id);
             }
         }
     }

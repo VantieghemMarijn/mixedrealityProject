@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-//using UnityEngine.SceneManagement;
-//using UnityEditor.SceneManagement;
 using System;
+using UnityEngine.XR.ARFoundation;
 
 public class AppManager : MonoBehaviour
 {
@@ -37,6 +36,7 @@ public class AppManager : MonoBehaviour
     public GameObject InfoPanel;
     public Text FoodNameUI;
     public Text FoodPriceUI;
+    public ARSession arSession;
 
     private GameObject BillBoardInstantie;
     private bool PlacingFood = true;
@@ -48,21 +48,16 @@ public class AppManager : MonoBehaviour
     private GameObject CurrentItemSelectedPrefab;
     private string CurrentItemSelectedName;
     private string CurrentItemSelectedDescr;
-    private bool isEditor;
 
 
     private void Start()
     {
+        arSession.Reset();
         Debug.Log(Storage.PrefabName);
         Debug.Log(Storage.PrefabPrice);
-        isEditor = Application.installMode == ApplicationInstallMode.Editor;
         InitSelectMenu();
         SelectItemFood(Storage.PrefabName);
         InfoPanel.gameObject.SetActive(false);
-        //if (isEditor == true)
-        //{
-        //    EditorSceneManager.LoadSceneInPlayMode("Assets/Editor/Scenes/Simulator.unity", new LoadSceneParameters(LoadSceneMode.Additive));
-        //}
     }
 
     public void OnDisable()

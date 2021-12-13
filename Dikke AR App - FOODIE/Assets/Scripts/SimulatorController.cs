@@ -16,6 +16,8 @@ public class SimulatorController : MonoBehaviour
     private void Start()
     {
         cam = GetComponent<Camera>();
+        // laad de simulator scene in
+        UnityEditor.SceneManagement.EditorSceneManager.LoadSceneInPlayMode("Assets/Editor/Scenes/Simulator.unity", new LoadSceneParameters(LoadSceneMode.Additive));
     }
 
     // Deze functies worden opgroepen vanuit je simulator window als je op een knop drukt
